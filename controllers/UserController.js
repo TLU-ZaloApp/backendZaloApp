@@ -9,6 +9,7 @@ const createUser = async (req, res) => {
       deviceId,
       department,
       studentId,
+      zaloId,
     } = req.body;
 
     const existingUser = await User.findOne({ phone });
@@ -23,6 +24,7 @@ const createUser = async (req, res) => {
         deviceId,
         department,
         studentId,
+        zaloId,
       });
 
       const savedUser = await newUser.save();
